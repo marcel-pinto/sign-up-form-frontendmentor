@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --darker-green: hsl(154, 59%, 40%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--red);
+  background-image: url("../images/bg-intro-mobile.png");
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  display: block;
+  outline: none;
+  font-weight: 700;
+  padding: 15px 20px;
+  width: 100%;
+  border: 2px solid var(--grayish-blue);
+  border-radius: 8px;
+}
+
+form input {
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border-color: var(--blue);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.background {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 60px 20px;
+}
+
+.header {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header h1 {
+  line-height: 1;
+}
+
+.header p {
+  margin: 30px auto;
+}
+
+.form-wrapper {
+  max-width: 900px;
+}
+
+.btn-try-it {
+  background-color: var(--blue);
+  border-radius: 8px;
+  color: #fff;
+  display: block;
+  margin: 20px auto;
+  padding: 20px 40px;
+  text-align: center;
+  transition: filter 0.2s;
+}
+
+.btn-try-it:hover {
+  filter: brightness(90%);
+}
+
+.form-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.btn-claim-trial {
+  background: linear-gradient(var(--green) 90%, var(--darker-green));
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 15px 0;
+  text-transform: uppercase;
+  width: 100%;
+  transition: opacity 0.2s;
+}
+
+.btn-claim-trial:hover {
+  opacity: 0.9;
+}
+
+.terms-and-services {
+  padding: 10px 25px;
+  color: var(--grayish-blue);
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.terms-and-services a {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.shadow {
+  box-shadow: 0 7px rgba(0, 0, 0, 0.2);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--blue);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+
+  .background {
+    height: 100vh;
+    display: flex;
+    max-width: 1024px;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+  }
+  .header {
+    flex: 1;
+    text-align: left;
+  }
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  .header p {
+    font: 1.5rem;
+  }
+  .form-wrapper {
+    flex: 1;
+    margin-left: 30px;
+  }
+
+  .terms-and-services {
+    font-size: 0.7rem;
+  }
+}
+
+.error {
+  background-image: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 95%;
+  border-color: var(--red);
+}
+
+.error-text {
+  font-size: 0.7rem;
+  font-style: italic;
+  font-weight: 600;
+  text-align: right;
+  color: var(--red);
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.hide-error-text {
+  display: none;
+  visibility: hidden;
+}
